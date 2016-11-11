@@ -1,3 +1,6 @@
+h1{
+	text-align: center;
+}
 .total {
    background-color: black;
    color: #ffc107  ;
@@ -13,4 +16,8 @@
 .cards{
 	width: 62%;
 	display: inline-block;
+}
+#especies{
+	border: 1px solid #ffc107 ;
+	margin-top: 56px;
 }
