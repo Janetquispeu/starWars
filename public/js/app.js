@@ -80,6 +80,7 @@ $(document).ready(function(){
 		});
 
 		$("#especies").change(function(e) {
+			$("#personaje").html("");
 				var b= $(this).val().split("/"); //
 				for (var i = 0; i < b.length; i++) {
 					$.getJSON("http://swapi.co/api/people/" + b[i] + "/", function(respuesta) {
