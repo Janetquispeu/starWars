@@ -20,20 +20,21 @@ $(document).ready(function(){
 				.replace("{{name}}", personaje.name)
 				.replace("{{url}}", personaje.url);
 			});
-			$("#people").html(personajes);
-			$("#next").attr("data-url",response.next.replace("http","https"));
-			$("#previous").attr("data-url-previous",response.previous.replace("http","https"));
-
-		if(!response.next){
-			$("#next").fadeOut();
-		}
-		else if (!response.previous) {
-			$("#previous").fadeOut();
-		}
-		else if (response.next && response.previous) {
-			$("#next").fadeIn();
-			$("#previous").fadeIn();
-		}
+			if(!response.next==null || !response.previous==null){
+				$("#people").html(personajes);
+				$("#next").attr("data-url",response.next.replace("http","https"));
+				$("#previous").attr("data-url-previous",response.previous.replace("http","https"));
+			}	
+			if(!response.next){
+				$("#next").fadeOut();
+			}
+			else if (!response.previous) {
+				$("#previous").fadeOut();
+			}
+			else if (response.next && response.previous) {
+				$("#next").fadeIn();
+				$("#previous").fadeIn();
+			}
 	}
 	$.getJSON("https://swapi.co/api/people/",formaResponse);
 
