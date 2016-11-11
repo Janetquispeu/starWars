@@ -1,0 +1,16 @@
+.total {
+   background-color: black;
+   color: #ffc107  ;
+   padding: 10px;
+   border-radius: 50%;
+}
+.espacio{
+    margin-left:10px;
+}
+.fondo{
+	background-color: #ffc107 ;
+}
+.cards{
+	width: 62%;
+	display: inline-block;
+}
