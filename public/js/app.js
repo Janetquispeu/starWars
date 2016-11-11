@@ -20,8 +20,8 @@ $(document).ready(function(){
 				.replace("{{name}}", personaje.name)
 				.replace("{{url}}", personaje.url);
 			});
-			if(!response.next==null || !response.previous==null){
 				$("#people").html(personajes);
+			if(!response.next==null || !response.previous==null){
 				$("#next").attr("data-url",response.next.replace("http","https"));
 				$("#previous").attr("data-url-previous",response.previous.replace("http","https"));
 			}	
