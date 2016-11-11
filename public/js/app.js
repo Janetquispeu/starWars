@@ -35,7 +35,7 @@ $(document).ready(function(){
 			$("#previous").fadeIn();
 		}
 	}
-	$.getJSON("http://swapi.co/api/people/",formaResponse);
+	$.getJSON("https://swapi.co/api/people/",formaResponse);
 
 
 	$("#next").click(function(event){
